@@ -1,0 +1,121 @@
+@use "../abstracts" as *;
+.stats {
+  background-color: #f0f1f6;
+  padding-bottom: 120px;
+
+  &__heading {
+    text-align: center;
+    padding-block: 9.375rem 5rem;
+    h2 {
+      font-size: 30px;
+      font-weight: $fw-700;
+      color: $Very-Dark-Blue;
+      margin-bottom: 20px;
+    }
+    p {
+      color: $Grayish-Violet;
+    }
+  }
+
+  &__features {
+    position: relative;
+    text-align: center;
+    @include media(62rem) {
+      display: grid;
+      gap: 1.875rem;
+      text-align: left;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    @include media(75rem) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    > div {
+      background-color: $white;
+      padding: 30px;
+      border-radius: 10px;
+      position: relative;
+      margin-bottom: 60px;
+      z-index: 10;
+      h3 {
+        color: $Very-Dark-Blue;
+        margin-block: 40px 10px;
+        font-weight: $fw-700;
+        font-size: 18px;
+      }
+      p {
+        color: $Grayish-Violet;
+      }
+      :where(div) {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $Dark-Violet;
+        border-radius: 50%;
+        height: 70px;
+        width: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -30px;
+        @include media(62rem) {
+          left: 60px;
+          margin: 0;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translatex(-50%);
+      height: 100%;
+      width: 7px;
+      background-color: $Cyan;
+    }
+
+    @include media(62rem) {
+      .details {
+        transform: translateY(25px);
+      }
+      .customiz {
+        transform: translateY(50px);
+      }
+      &::before {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 7px;
+        left: unset;
+      }
+    }
+  }
+}
+.boost {
+  padding-block: 3.125rem;
+  text-align: center;
+  background: url("../images/bg-boost-mobile.svg") no-repeat center center/cover;
+  background-color: $Dark-Violet;
+  @include media(62rem) {
+    background: url("../images/bg-boost-desktop.svg") no-repeat center
+      center/cover;
+    background-color: $Dark-Violet;
+  }
+  h2 {
+    color: $white;
+    font-weight: $fw-700;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  button {
+    @extend %primary-btn;
+    a {
+      display: block;
+      padding: 10px 20px;
+      font-weight: $fw-700;
+      color: $white;
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@use "../abstracts" as *;
+@use "../components" as *;
+header {
+  .page-header {
+    .logo {
+      margin-right: 30px;
+    }
+    margin-top: 2rem;
+    display: flex;
+    @include media(47.9375rem, max) {
+      @include flex();
+    }
+    nav {
+      @include media(48rem) {
+        flex: 1;
+      }
+      // Burger Manu For Mobile
+      .brg-manu {
+        @include media(48rem) {
+          display: none;
+        }
+        cursor: pointer;
+        &.active + ul {
+          z-index: 10;
+          opacity: 1;
+          transform: translateY(15px);
+        }
+      }
+      ul {
+        @include media(48rem) {
+          display: flex;
+          justify-content: space-between;
+          a {
+            margin-left: 30px;
+            &:not(.primary--btn) {
+              color: $Gray;
+              transition: 0.3s;
+              &:hover {
+                color: $Very-Dark-Violet;
+              }
+            }
+            &.primary--btn {
+              padding: 10px 20px;
+              background-color: $Cyan;
+              color: $white;
+              border-radius: 30px;
+              transition: 0.3s;
+              &:hover {
+                background-color: $cyan-hover;
+              }
+            }
+          }
+        }
+        .links {
+          // for larger screens
+          @include media(48rem) {
+            display: flex;
+          }
+        }
+        @include media(47.9375rem, max) {
+          position: absolute;
+          right: 15px;
+          text-align: center;
+          padding: 1.25rem;
+          background-color: hsl(257, 27%, 26%);
+          border-radius: 10px;
+          z-index: -1;
+          transition: 0.3s;
+          opacity: 0;
+          width: calc(100% - 30px);
+          .links {
+            border-bottom: 1px solid $Grayish-Violet;
+            margin-bottom: 25px;
+          }
+          a {
+            margin-block: 25px;
+            transition: 0.3s;
+            color: $white;
+            display: block;
+            width: fit-content;
+            margin-inline: auto;
+            &:not(.primary--btn):hover {
+              color: $Gray;
+            }
+          }
+          .login {
+            .primary--btn {
+              width: 100%;
+              padding: 10px;
+              background-color: $Cyan;
+              border-radius: 30px;
+              &:hover {
+                background-color: $cyan-hover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

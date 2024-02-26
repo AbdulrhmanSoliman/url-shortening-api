@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+body {
+  font-family: $font-family;
+  line-height: 1.5;
+}
+
+main {
+  background-color: $white;
+  overflow-x: hidden;
+}

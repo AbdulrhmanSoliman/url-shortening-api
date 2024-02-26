@@ -1,0 +1,50 @@
+@use "sass:math";
+@use "variables" as *;
+@mixin flex($display: flex, $justify: space-between, $align: center) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+// Breakpoint for all devices
+@mixin media($breakpoint, $minmax: min) {
+  @if $minmax == min {
+    $minmax: min-width;
+  } @else if $minmax == max {
+    $minmax: max-width;
+  }
+  @media screen and ($minmax: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin circle($dimensions) {
+  width: $dimensions;
+  height: $dimensions;
+  border-radius: 50%;
+}
+
+@mixin abs-position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+%center-horizontal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+%primary-btn {
+  border: 0;
+  border-radius: 30px;
+  background-color: $Cyan;
+  transition: 0.3s;
+  color: white;
+  cursor: pointer;
+  font-family: $font-family;
+  &:hover {
+    background-color: $cyan-hover;
+  }
+}
