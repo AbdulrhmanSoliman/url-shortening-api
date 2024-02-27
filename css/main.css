@@ -193,7 +193,7 @@ header .page-header nav .brg-manu.active + ul {
     width: calc(100% - 30px);
   }
   header .page-header nav ul .links {
-    border-bottom: 1px solid hsl(257, 7%, 63%);
+    border-bottom: 1px solid #59575f;
     margin-bottom: 25px;
   }
   header .page-header nav ul a {
@@ -230,7 +230,7 @@ header .page-header nav .brg-manu.active + ul {
   line-height: 1.2;
 }
 .landing__text P {
-  color: hsl(257, 7%, 63%);
+  color: #59575f;
   margin-bottom: 20px;
 }
 .landing__text button a {
@@ -356,7 +356,7 @@ header .page-header nav .brg-manu.active + ul {
   margin-bottom: 20px;
 }
 .stats__heading p {
-  color: hsl(257, 7%, 63%);
+  color: #59575f;
 }
 .stats__features {
   position: relative;
@@ -390,7 +390,7 @@ header .page-header nav .brg-manu.active + ul {
   font-size: 18px;
 }
 .stats__features > div p {
-  color: hsl(257, 7%, 63%);
+  color: #59575f;
 }
 .stats__features > div :where(div) {
   position: absolute;
