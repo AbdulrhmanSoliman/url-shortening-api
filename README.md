@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Take a look 😀](https://abdulrhmansoliman.github.io/url-shortening-api/)
+- Live Site URL: [Take a look here](https://abdulrhmansoliman.github.io/url-shortening-api/)
 - My GitHub URL: [GitHub](http://github.com/AbdulrhmanSoliman)
 
 ### Built with
